@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="bg-gray-700 h-screen flex justify-center">
+      <div class="max-w-sm w-full pt-8">
+        <div class="py-8 border-b border-gray-500">
+          <h1 class="text-4xl font-mono tracking-tight leading-8 font-bold">
+            <span class="text-white block">Generate a</span>
+            <span class="text-green-400">random password</span>
+          </h1>
+          <p class="text-gray-300 mt-2 text-lg font-semibold">Never use a insecure password again.</p>
+          <button id="password-button" class="bg-green-500 hover:bg-green-600 font-semibold text-sm text-white mt-8 px-3 py-2 rounded-md">Generate passwords</button>
+          <div>
+            <label class="text-gray-300 mt-2 text-lg" for="passlenght-input">set password lenght</label>
+            <input id="passlenght-input" value="15" class="p-1 rounded-md w-7" type="text" maxlength="2" ondrop="return false;" onpaste="return false;"
+            onkeypress="return event.charCode>=48 && event.charCode<=57" required/>
+          </div>
+          <div>
+            <div>
+              <label class="text-gray-300 mt-2 text-lg" for="number">include numbers</label>
+              <input checked type="checkbox" name="number" id="number-checkbox">
+            </div>
+            <div>
+              <label class="text-gray-300 mt-2 text-lg" for="symbol">include symbols</label>
+              <input checked type="checkbox" name="symbol" id="symbol-checkbox">
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center">
+          <p id="password1-p" class="text-green-400 cursor-pointer font-semibold w-2/3 bg-gray-600 text-center rounded-md mt-5 mr-2 px-3 py-2">password1</p>
+          <p id="password2-p" class="text-green-400 cursor-pointer font-semibold w-2/3 bg-gray-600 text-center rounded-md mt-5 ml-2 px-3 py-2">password2</p>
+        </div>
+      </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
